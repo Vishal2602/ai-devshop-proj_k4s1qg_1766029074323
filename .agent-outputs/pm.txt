@@ -1,0 +1,36 @@
+📋 PM Summary: MessageClearance
+
+APP NAME: MessageClearance ✈️
+TAGLINE: "Your message has been cleared for takeoff."
+
+TARGET USER: Remote workers sending 50+ messages/day who worry about tone in async communication.
+
+CORE FEATURES (prioritized):
+P0 - MVP:
+  1. Tone Scanner - detects passive-aggressive/rude/vague with explanations
+  2. Three Rewrite Buttons - Short & direct | Warm & human | Confident & assertive
+  3. Boarding Pass Verdict - ✅ Good to send | ⚠️ Needs edit | 🚨 High risk
+
+P1 - Should Have:
+  4. Missing Info Detector - flags what readers will ask next
+  5. Subject/Opener Suggestion - better first lines for emails/DMs
+
+P2 - Nice to Have:
+  6. Safety Check Toggle - warns about sensitive data (regex, no AI)
+  7. Model Selector - fast/cheap vs best quality
+
+USER FLOW: Paste → Scan animation → Results (verdict + risks + rewrites) → Copy → Done
+
+EMOTIONAL GOAL: "I'm protected from myself." Relief, confidence, speed, delight.
+
+AI/LLM INTEGRATION:
+- Provider: OpenRouter (user's own key, stored in localStorage)
+- Default model: claude-3.5-sonnet
+- Fast option: claude-3-haiku
+- Single API call returns structured JSON with all analysis
+- AI powers: tone analysis, missing info, rewrites, opener suggestions
+- Non-AI: Safety check (regex patterns)
+
+OUT OF SCOPE (v1): Auth, history, browser extension, mobile app, team features
+
+TECH: React + Vite, Tailwind, localStorage, static hosting (Vercel/Netlify)
